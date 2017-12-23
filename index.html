@@ -1,1 +1,42 @@
-Hello World
+
+
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Life</title>
+<style>
+.divCell {
+	 position:absolute;
+	 width:10px;
+	 height:10px;
+	 border-width:1px;
+	 border-style:dotted;
+	 border-color:black;
+	 background: white;
+}
+#universe {
+	position:relative;
+	margin:20px auto;
+}
+.buttons {
+	width: 80%; 
+	margin: 0 auto; 
+}
+</style>
+<script type="text/javascript" src="life.js"></script>
+</head>
+<body onload="createUniverse();" onclick="cellClick(event)"> <!--It is not bag, it is feature! Press Right.-->
+	<div style="margin:10px auto; width:800px;">
+		<h1>Conway's game of life</h1>
+		<div state="0" class="buttons">
+			<input type="text" id="liveTime" />
+			<button onclick="startLife()">Start</button>
+			<button onclick="pauseLife()">Pause</button>
+			<button onclick="stepLife()">Step</button>
+			<button onclick="killLife()">Kill All</button>
+		</div>
+		<div id='universe'></div>
+	</div>
+</body>
+</html>
+
